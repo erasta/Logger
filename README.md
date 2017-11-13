@@ -4,20 +4,16 @@ Simple logger with severity filter and template variadic printing
 Example:
 ```cpp
 #include "Logger.h"
-
 void func() {
-	auto scope = Logger::scope("func");
+    auto scope = Logger::scope("func");
 }
-
-int main() {
-	Logger::log("hello", "world", 1234);
-	func();
-	LOGPOS;
-	return 0;
+void main() {
+    Logger::log("hello", "world", 1234);
+    func();
+    LOGPOS;
 }
 ```
-
-Output for example.cpp:
+Output for example:
 ```
 1e-06 Log hello world 1234
 4.3e-05 Log Starting func
