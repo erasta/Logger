@@ -8,8 +8,13 @@
 
 #include "Logger.h"
 
+void func() {
+	auto scope = Logger::scope("func");
+}
+
 int main() {
-	LOGPOS;
 	Logger::log("hello", "world", 1234);
+	func();
+	LOGPOS;
 	return 0;
 }
